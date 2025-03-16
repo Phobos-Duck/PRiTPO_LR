@@ -5,3 +5,4 @@
 В каждой ветке есть README, где представлены скриншоты работы кода
 Ссылки на ветки лабораторных работ:
 Лаб. работа 1 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_1
+Лаб. работа 2 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_2
