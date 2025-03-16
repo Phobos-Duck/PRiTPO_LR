@@ -1,7 +1,13 @@
-# PRiTPO_LR
-Лабораторные работы по дисциплине Проектирование и тестирование программного обеспечения
+Примеры работы программы:
 
-В данном репозитории лабораторные работы лежат в ветках, каждая помечена номером (LR_1, LR_2 и т.д.)
-В каждой ветке есть README, где представлены скриншоты работы кода
-Ссылки на ветки лабораторных работ:
-Лаб. работа 1 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_1
+# 1
+
+![image](https://github.com/user-attachments/assets/0c0f462c-c9f9-43f8-9257-ae080e9419d8)
+
+# 2
+
+![image](https://github.com/user-attachments/assets/4f91a951-7527-484a-94c4-0318ff6d7651)
+
+# 3
+
+![image](https://github.com/user-attachments/assets/146fd432-b6eb-465d-bc69-f8247830728a)
