@@ -4,5 +4,9 @@
 В данном репозитории лабораторные работы лежат в ветках, каждая помечена номером (LR_1, LR_2 и т.д.)
 В каждой ветке есть README, где представлены скриншоты работы кода
 Ссылки на ветки лабораторных работ:
-Лаб. работа 1 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_1
-Лаб. работа 2 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_2
+
+# Лаб. работа 1 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_1
+
+# Лаб. работа 2 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_2
+
+# Лаб. работа 3 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_3
