@@ -1,12 +1,5 @@
-# PRiTPO_LR
-Лабораторные работы по дисциплине Проектирование и тестирование программного обеспечения
+Примеры работы кода
 
-В данном репозитории лабораторные работы лежат в ветках, каждая помечена номером (LR_1, LR_2 и т.д.)
-В каждой ветке есть README, где представлены скриншоты работы кода
-Ссылки на ветки лабораторных работ:
+Часть 1 - Дилемма археолога (main_1):
+![image](https://github.com/user-attachments/assets/700276a3-c038-4681-9ff7-93b0f0bddd3d)
 
-# Лаб. работа 1 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_1
-
-# Лаб. работа 2 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_2
-
-# Лаб. работа 3 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_3
