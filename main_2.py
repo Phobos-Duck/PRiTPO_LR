@@ -1,42 +1,64 @@
-def count_lost_workdays(n, parties):
+def get_new_deck():
     """
-    Рассчет с учетом входных данных кол-ва потерянных рабочих дней
-    
-    :param n: кол-во дней
-    :param parties: список чисел, где каждое p означает, что партия устраивает забастовку каждые эти p дней
-    :return: кол-во потерянных рабочих дней
+    Создает новую стандартную колоду карт в начальном порядке.
     """
-    lost_days = set()
+    suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
+    values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
+    return [f"{value} of {suit}" for suit in suits for value in values]
 
-    for p in parties:
-        for day in range(p, n + 1, p):
-            if day % 7 not in (6, 0):  # Исключаем пятницы (6) и субботы (0)
-                lost_days.add(day)
 
-    return len(lost_days)
+def apply_shuffle(deck, shuffle):
+    """
+    Применяет трюк к текущей колоде.
+    """
+    return [deck[i - 1] for i in shuffle]
 
 
 def main():
     """
-    Основная функция считывания и обработки входных данных
+    Считывает данные из консоли и выводит их.
     """
-    data = list(map(int, input().split()))
+    input_data = []
+    while True:
+        try:
+            line = input().strip()
+            if line == "":
+                if input_data and input_data[-1] == "":
+                    break
+                input_data.append(line)
+            else:
+                input_data.append(line)
+        except EOFError:
+            break
+
     index = 0
-    t = data[index]
+    test_cases = int(input_data[index])
     index += 1
     results = []
 
-    for _ in range(t):
-        n = data[index]
+    for _ in range(test_cases):
         index += 1
-        p = data[index]
+        n = int(input_data[index])
         index += 1
-        parties = data[index:index + p]
-        index += p
-        results.append(count_lost_workdays(n, parties))
 
-    for res in results:
-        print(res)
+        shuffles = []
+        for _ in range(n):
+            shuffle = list(map(int, input_data[index].split()))
+            if len(shuffle) != 52:
+                raise ValueError("Ошибка: В каждом трюке должно быть 52 числа.")
+            shuffles.append(shuffle)
+            index += 1
+
+        deck = get_new_deck()
+
+        while index < len(input_data) and input_data[index].strip():
+            k = int(input_data[index]) - 1
+            deck = apply_shuffle(deck, shuffles[k])
+            index += 1
+
+        results.append("\n".join(deck))
+
+    print("\n\n".join(results))
 
 
 if __name__ == "__main__":
