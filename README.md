@@ -1,4 +1,4 @@
-Примеры работы кода:
+Примеры работы кода (часть 1):
 
 # 1
 ![image](https://github.com/user-attachments/assets/72129c92-c865-48a5-a8b9-21d8ae53d7ff)
