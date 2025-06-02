@@ -1,12 +1,8 @@
-# PRiTPO_LR
-Лабораторные работы по дисциплине Проектирование и тестирование программного обеспечения
+Часть 1 - Перетягивание каната (main_1)
 
-В данном репозитории лабораторные работы лежат в ветках, каждая помечена номером (LR_1, LR_2 и т.д.)
-В каждой ветке есть README, где представлены скриншоты работы кода
-Ссылки на ветки лабораторных работ:
+![image](https://github.com/user-attachments/assets/63e88abb-58c8-4281-967a-1285518534cb)
 
-# Лаб. работа 1 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_1
 
-# Лаб. работа 2 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_2
+Часть 2 - Распил (main_2)
 
-# Лаб. работа 3 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_3
+![image](https://github.com/user-attachments/assets/29e1d7f2-66fc-4ef9-9783-7c3c1e55a5bc)
