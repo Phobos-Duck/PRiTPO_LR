@@ -5,3 +5,5 @@
 
 Часть 2 - Постановщик задач (main_2)
 
+![image](https://github.com/user-attachments/assets/6b909de5-bf96-4898-b014-c48930514629)
+
