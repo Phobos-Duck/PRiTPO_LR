@@ -1,61 +1,90 @@
-def rope_teams(test_cases):
-    results = []
-    for case in test_cases:
-        n, weights = case
-        total_weight = sum(weights)
-        max_half = (n + 1) // 2
-        max_weight = total_weight // 2
+face_names = ['front', 'back', 'left', 'right', 'top', 'bottom']
+opposite_face = [1, 0, 3, 2, 5, 4]  # Индексы противоположных граней
 
-        dp = [[0] * (max_weight + 1) for _ in range(max_half + 1)]
 
-        for weight in weights:
-            for i in range(max_half, 0, -1):
-                for j in range(max_weight, weight - 1, -1):
-                    if dp[i - 1][j - weight] + weight > dp[i][j]:
-                        dp[i][j] = dp[i - 1][j - weight] + weight
-
-        best_weight = 0
-        for i in range(max_half, 0, -1):
-            if dp[i][max_weight] > best_weight:
-                best_weight = dp[i][max_weight]
-
-        other_weight = total_weight - best_weight
-        if best_weight < other_weight:
-            results.append(f"{best_weight} {other_weight}")
-        else:
-            results.append(f"{other_weight} {best_weight}")
-    return results
-
-def main():
-    input_data = """
-    1
-
-    3
-    100
-    90
-    200
-    """
-
+def solve(input_data):
     lines = [line.strip() for line in input_data.split('\n') if line.strip()]
-    idx = 0
-    T = int(lines[idx])
-    idx += 1
-    test_cases = []
-    while idx < len(lines):
-        n = int(lines[idx])
-        idx += 1
-        weights = []
-        for _ in range(n):
-            weights.append(int(lines[idx]))
-            idx += 1
-        test_cases.append((n, weights))
+    case_number = 0
+    index = 0
 
-    results = rope_teams(test_cases)
-    for i, res in enumerate(results):
-        print(res)
-        if i < len(results) - 1:
-            print()
+    while index < len(lines):
+        N = int(lines[index])
+        if N == 0:
+            break
+        index += 1
+
+        cubes = []
+        for _ in range(N):
+            while index < len(lines) and not lines[index].strip():
+                index += 1
+            if index >= len(lines):
+                break
+            cube = list(map(int, lines[index].strip().split()))
+            if len(cube) != 6:
+                print(f"Error: Cube should have 6 faces, got {len(cube)}")
+                break
+            cubes.append(cube)
+            index += 1
+
+        case_number += 1
+        process_case(case_number, N, cubes)
 
 
-if __name__ == "__main__":
-    main()
+def process_case(case_number, N, cubes):
+    dp = [[1] * 6 for _ in range(N)]
+    prev = [[None] * 6 for _ in range(N)]
+
+    max_height = 1
+    last_cube = 0
+    last_face = 0
+
+    for i in range(N):
+        for j in range(6):
+            for k in range(i):
+                for m in range(6):
+                    if cubes[k][opposite_face[m]] == cubes[i][j]:
+                        if dp[k][m] + 1 > dp[i][j]:
+                            dp[i][j] = dp[k][m] + 1
+                            prev[i][j] = (k, m)
+            if dp[i][j] > max_height:
+                max_height = dp[i][j]
+                last_cube = i
+                last_face = j
+
+    result = []
+    current_cube, current_face = last_cube, last_face
+    while current_cube is not None:
+        result.append(f"{current_cube + 1} {face_names[current_face]}")
+        prev_info = prev[current_cube][current_face]
+        if prev_info is None:
+            break
+        current_cube, current_face = prev_info
+
+    result.reverse()
+
+    print(f"Case #{case_number}")
+    print(max_height)
+    for line in result:
+        print(line)
+    print()
+
+input_data = """
+3
+1 2 2 2 1 2
+3 3 3 3 3 3
+3 2 1 1 1 1
+10
+1 5 10 3 6 5
+2 6 7 3 6 9
+5 7 3 2 1 9
+1 3 3 5 8 10
+6 6 2 2 4 4
+1 2 3 4 5 6
+10 9 8 7 6 5
+6 1 2 3 4 7
+1 2 3 3 2 1
+3 2 1 1 2 3
+0
+"""
+
+solve(input_data)
