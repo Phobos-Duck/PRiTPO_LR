@@ -11,6 +11,6 @@
 
 # Лаб. работа 3 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_3
 
-#Лаб. работа 4 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_4
+# Лаб. работа 4 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_4
 
-#Лаб. работа 5 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_5
+# Лаб. работа 5 - https://github.com/Phobos-Duck/PRiTPO_LR/tree/LR_5
