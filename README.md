@@ -1,8 +1,7 @@
-Часть 1 - Перетягивание каната (main_1)
+Часть 1 - Кубики (main_1)
 
-![image](https://github.com/user-attachments/assets/63e88abb-58c8-4281-967a-1285518534cb)
+![image](https://github.com/user-attachments/assets/b803ce49-603b-4e5a-8f29-c9e2d5029c45)
 
 
-Часть 2 - Распил (main_2)
+Часть 2 - Постановщик задач (main_2)
 
-![image](https://github.com/user-attachments/assets/29e1d7f2-66fc-4ef9-9783-7c3c1e55a5bc)
